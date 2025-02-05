@@ -1,0 +1,64 @@
+.loginContainer {
+  flex: 1;
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginFormWrapper {
+    height: 85%;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loginForm {
+    border-radius: 15px;
+    box-shadow: 5px 2px 15px black;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .inputWrapper {
+      // border: 1px solid black;
+      font-size: 14px;
+      gap: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+
+      input {
+        padding: 5px;
+        font-size: 14px;
+        flex: 1;
+        outline: none;
+      }
+      .passwordWrapper{
+        border: 1px solid grey;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        border-radius: 3px;
+        input{
+          border: none;
+          outline: none;
+        }
+      }
+    }
+    button {
+      width: 50%;
+      margin: auto;
+      padding: 12px;
+      border-radius: 15px;
+      border: none;
+      cursor: pointer;
+      background-color: black;
+      color: lightgrey;
+    }
+  }
+}

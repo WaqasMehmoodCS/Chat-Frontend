@@ -1,0 +1,31 @@
+.container {
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logowrapper {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .logoText {
+      font-weight: bold;
+    }
+  }
+  .actions {
+    display: flex;
+    gap: 50px;
+    padding: 0 10px;
+    height: 100%;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .actionText {
+    display: none;
+  }
+}
