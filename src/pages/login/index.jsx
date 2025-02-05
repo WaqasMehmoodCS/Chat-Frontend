@@ -34,7 +34,7 @@ const Login = () => {
       if (error.status === 403) {
         setErr(true);
       } else {
-        alert(`Something went wrong`);
+        alert(`No Response from Server`);
       }
     } finally {
       setLoading(false);

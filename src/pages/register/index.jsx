@@ -23,7 +23,6 @@ const Register = () => {
     if (confirmPassword !== password) {
       setPasswordNotMatch(true);
       setLoading(false);
-      alert(`Password must match`);
       return false;
     }
 
@@ -37,7 +36,7 @@ const Register = () => {
         alert(`User Email Already Registered.`);
         window.location.reload();
       } else {
-        alert(`Something went wrong`);
+        alert(`No Response from Server`);
       }
     } finally {
       setLoading(false);
