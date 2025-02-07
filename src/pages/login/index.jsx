@@ -1,7 +1,7 @@
 import "./Login.scss";
 import { api } from "../../lib/axios/axiosInstance";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loading from "../../components/loading";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 
@@ -11,6 +11,21 @@ const Login = () => {
   const [err, setErr] = useState(false);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkUser = async () => {
+      try {
+        const res = await api.get("/auth/checkuser");
+        if (res.status === 200) {
+          navigate("/chat", { replace: true });
+        }
+      } catch (error) {
+        // console.log(error);
+      }
+    };
+    checkUser();
+  }, [navigate]);
+
   const handleLoginSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
