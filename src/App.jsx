@@ -6,6 +6,7 @@ const Login = React.lazy(() => import("./pages/login"));
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Register = React.lazy(() => import("./pages/register"));
 const Homepage = React.lazy(() => import("./pages/homepage"));
+const Chat = React.lazy(() => import("./pages/chat"));
 
 const App = () => {
   
@@ -38,6 +39,14 @@ const App = () => {
             element={
               <Suspense fallback={<Loading />}>
                 <Login />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/chat"
+            element={
+              <Suspense fallback={<Loading />}>
+                <Chat />
               </Suspense>
             }
           />

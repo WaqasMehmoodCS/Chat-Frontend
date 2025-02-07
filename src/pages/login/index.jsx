@@ -20,15 +20,9 @@ const Login = () => {
     const password = formData.get("password");
 
     try {
-      const res = await api.post(
-        `/auth/login`,
-        { email, password },
-        { withCredentials: true }
-      );
-      console.log(res);
+      const res = await api.post(`/auth/login`, { email, password });
       if (res.status === 200) {
-        alert(`Login Successful`);
-        navigate("/login", { replace: true });
+        navigate("/chat", { replace: true });
       }
     } catch (error) {
       if (error.status === 403) {
